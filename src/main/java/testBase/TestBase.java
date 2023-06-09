@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class TestBase {
 	
@@ -26,6 +27,7 @@ public static WebDriver driver;
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.google.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		System.out.println("Changes for GIT");
 		
 	}
 	

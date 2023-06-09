@@ -2,6 +2,8 @@ package practice;
 
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,6 +19,9 @@ public class Screensht {
 		driver.get("https://www.google.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.quit();
+		
+		((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
 
 	}
 
